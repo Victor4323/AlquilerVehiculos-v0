@@ -56,12 +56,12 @@ package org.iesalandalus.programacion.alquilervehiculos.vista;
 		}
 
 		public static Opcion elegirOpcion() {
-			int indiceOpcion = 0;
+			int escogerOpcion = 0;
 			Opcion opcion = null;
 			do {
 				try {
-					indiceOpcion = leerEntero("Pon una opción: ");
-					
+					escogerOpcion = leerEntero("Pon una opción: ");
+					opcion = Opcion.get(escogerOpcion);
 				} catch (IllegalArgumentException e) {
 					System.out.printf("%s",e.getMessage());
 				}
