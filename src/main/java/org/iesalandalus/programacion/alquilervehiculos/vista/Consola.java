@@ -70,19 +70,19 @@ package org.iesalandalus.programacion.alquilervehiculos.vista;
 		}
 
 		public static Cliente leerCliente() {
-			return new Cliente(leerNombre(), leerCadena("Pon un DNI válido: "), leerTelefono());
+			return new Cliente(leerNombre(), leerCadena("Pon un DNI que sea válido: "), leerTelefono());
 		}
 
 		public static Cliente leerClienteDni() {
-			return Cliente.getClienteConDni(leerCadena("Pon un DNI válido: "));
+			return Cliente.getClienteConDni(leerCadena("Pon un DNI que sea válido: "));
 		}
 
 		public static String leerNombre() {
-			return leerCadena("Mete el nombre del cliente: ");
+			return leerCadena("Mete el nombre de un cliente: ");
 		}
 
 		public static String leerTelefono() {
-			return leerCadena("Mete un teléfono del cliente: ");
+			return leerCadena("Mete el teléfono de un cliente: ");
 		}
 
 		public static Turismo leerTurismo() {
