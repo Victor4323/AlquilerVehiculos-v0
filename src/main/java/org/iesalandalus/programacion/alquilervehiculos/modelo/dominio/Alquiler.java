@@ -55,7 +55,7 @@ public class Alquiler {
 		if (fechaAlquiler == null) {
 			throw new NullPointerException("ERROR: La fecha de alquiler no puede ser nula.");
 		}
-		LocalDate hoy = LocalDate.now(); // La grasa
+		LocalDate hoy = LocalDate.now(); //La grasa
 		if (fechaAlquiler.isAfter(hoy)) {
 			throw new IllegalArgumentException("ERROR: La fecha de alquiler no puede ser futura.");
 		}
@@ -139,17 +139,10 @@ public class Alquiler {
 
 	@Override
 	public String toString() {
-        String cadenaFrase = null;
-        if (this.fechaDevolucion == null) {
+		return String.format("Alquiler PRECIO_DIA=%s, fechaAlquiler=%s, fechaDevolucion=%s, turismo=%s, cliente=%s",
+				PRECIO_DIA, fechaAlquiler, fechaDevolucion, turismo, cliente);
+	}
 
-            cadenaFrase = String.format("%s <---> %s, %s - %s (%d€)" , cliente , turismo , getFechaAlquiler().format(FORMATO_FECHA),"Aún no devuelto",getPrecio());
+	
 
-        }else {
-            cadenaFrase = String.format("%s <---> %s, %s - %s (%d€)" ,cliente , turismo , getFechaAlquiler().format(FORMATO_FECHA),getFechaDevolucion().format(FORMATO_FECHA),getPrecio());
-        }
-
-        return cadenaFrase;
-    }
-
-
-    }
+}
